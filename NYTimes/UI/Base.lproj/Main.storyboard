@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NewsVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewsVC" customModule="NYTimes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpm-7R-tv0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbL-Fg-iwf">
+                                        <rect key="frame" x="0.0" y="40" width="414" height="778"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="0aD-B1-WOD"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Kv4-Ue-Tvo"/>
+                                        </connections>
+                                    </tableView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jL-K0-sF7">
+                                        <rect key="frame" x="374" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JcY-mr-b2A"/>
+                                            <constraint firstAttribute="width" constant="40" id="qto-Dq-0mc"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button" image="magnifyingglass" catalog="system"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NY TIMES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8b-gf-Uvz">
+                                        <rect key="frame" x="164" y="8" width="86" height="17"/>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bbL-Fg-iwf" secondAttribute="trailing" id="Q8d-XM-aZ1"/>
+                                    <constraint firstItem="7jL-K0-sF7" firstAttribute="top" secondItem="wpm-7R-tv0" secondAttribute="top" id="RDr-W9-S9F"/>
+                                    <constraint firstItem="bbL-Fg-iwf" firstAttribute="leading" secondItem="wpm-7R-tv0" secondAttribute="leading" id="Rhh-1E-0ld"/>
+                                    <constraint firstItem="I8b-gf-Uvz" firstAttribute="centerX" secondItem="wpm-7R-tv0" secondAttribute="centerX" id="a26-fi-yJa"/>
+                                    <constraint firstItem="bbL-Fg-iwf" firstAttribute="top" secondItem="wpm-7R-tv0" secondAttribute="top" constant="40" id="iYC-Gp-feq"/>
+                                    <constraint firstAttribute="trailing" secondItem="7jL-K0-sF7" secondAttribute="trailing" id="mja-ng-hhs"/>
+                                    <constraint firstAttribute="bottom" secondItem="bbL-Fg-iwf" secondAttribute="bottom" id="omy-JJ-7sR"/>
+                                    <constraint firstItem="I8b-gf-Uvz" firstAttribute="top" secondItem="wpm-7R-tv0" secondAttribute="top" constant="8" id="znL-EF-nYX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wpm-7R-tv0" secondAttribute="trailing" id="JF3-AS-Hh7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wpm-7R-tv0" secondAttribute="bottom" id="ddM-wY-HAE"/>
+                            <constraint firstItem="wpm-7R-tv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fNC-Lz-nHo"/>
+                            <constraint firstItem="wpm-7R-tv0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hU5-tD-EFM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="newsTableView" destination="bbL-Fg-iwf" id="jKC-90-Wic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
